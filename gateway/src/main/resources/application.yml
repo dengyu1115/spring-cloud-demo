@@ -1,0 +1,25 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # 是否和服务注册与发现组件结合，设置为 true 后可以直接使用应用名称调用服务
+          enabled: true
+
+eureka:
+  instance:
+    # 使用 ip 代替实例名
+    prefer-ip-address: true
+    # 实例的主机名
+    hostname: ${spring.cloud.client.ip-address}
+    # 实例的 ID 规则
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+  client:
+    serviceUrl:
+      # 注册中心地址
+      defaultZone: http://127.0.0.1:8081/eureka/
