@@ -1,0 +1,223 @@
+{
+  "info": {
+    "_postman_id": "69e9771a-351c-415d-b99d-8ea731bba430",
+    "name": "spring-cloud-demo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "gateway demo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/http/demo/test",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "http",
+            "demo",
+            "test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "websocket send demo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": \"id001\",\r\n    \"system\": \"system01\",\r\n    \"content\": \"abcde\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8084/message/send",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "message",
+            "send"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "websocket send proxy",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": \"id001\",\r\n    \"system\": \"system01\",\r\n    \"content\": \"abcde\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/web_socket/message/send",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "web_socket",
+            "message",
+            "send"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http demo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8083/demo/test",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8083",
+          "path": [
+            "demo",
+            "test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "security demo",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiW1JPTEVfQURNSU5dIiwiZXhwIjoxNjIyNDU5ODUxLCJpYXQiOjE2MjE4NTUwNTEsInVzZXJuYW1lIjoibmF0dXJlIn0.rh8m2cTFHVW9ncWymzEQOnM66r2XJkWBirjGbTy67ZA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": \"test\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8090/security/test",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8090",
+          "path": [
+            "security",
+            "test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "security login demo",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "name",
+            "value": "user",
+            "type": "text",
+            "disabled": true
+          },
+          {
+            "key": "password",
+            "value": "$2a$10$O8izUbU7lRZo3lqOhjXX1u18U0byT7heWyn8nOmNBlW.6ZAHK9E1K",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": \"test\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8090/security/test",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8090",
+          "path": [
+            "security",
+            "test"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
