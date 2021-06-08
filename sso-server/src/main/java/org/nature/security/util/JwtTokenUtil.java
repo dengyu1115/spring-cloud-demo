@@ -22,7 +22,7 @@ public class JwtTokenUtil {
     /**
      * 签名主题
      */
-    public static final String SUBJECT = "nature";
+    public static final String SUBJECT = "org/nature";
     /**
      * 过期时间 7天
      */

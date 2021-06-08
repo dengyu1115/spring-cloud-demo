@@ -1,17 +1,20 @@
-package org.nature.http.controller;
+package org.nature.security.controller;
+
 
 import org.nature.common.model.Res;
-import org.nature.http.model.Demo;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("demo")
+import java.util.Map;
+
+@RequestMapping("security")
 @RestController
-public class DemoController {
+public class SecurityController {
 
     @RequestMapping("test")
-    public Res<Demo> test(@RequestBody Demo req) {
-        return Res.ok(req);
+    public Res<String> test(@RequestBody Map<String, Object> req) {
+        return Res.ok(req.get("data").toString());
     }
+
 }

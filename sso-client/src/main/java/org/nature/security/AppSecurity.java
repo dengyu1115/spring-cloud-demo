@@ -1,4 +1,4 @@
-package org.nature;
+package org.nature.security;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,9 +6,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class AppHttp {
+public class AppSecurity {
 
     public static void main(String[] args) {
-        SpringApplication.run(AppHttp.class, args);
+        SpringApplication.run(AppSecurity.class, args);
     }
 }

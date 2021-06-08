@@ -1,15 +1,14 @@
-package org.nature;
-
+package org.nature.http;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-@EnableEurekaServer
-public class AppEureka {
+@EnableDiscoveryClient
+public class AppHttp {
 
     public static void main(String[] args) {
-        SpringApplication.run(AppEureka.class, args);
+        SpringApplication.run(AppHttp.class, args);
     }
 }

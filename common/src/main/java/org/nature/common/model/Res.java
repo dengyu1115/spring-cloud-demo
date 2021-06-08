@@ -30,7 +30,6 @@ public class Res<T> {
         return new Res<>(Err.NORMAL.getCode(), null, data);
     }
 
-
     public static <T> Res<T> ok(String msg, T data) {
         return new Res<>(Err.NORMAL.getCode(), msg, data);
     }
