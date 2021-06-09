@@ -1,6 +1,7 @@
 package org.nature.feign.controller;
 
 import org.nature.common.model.Res;
+import org.nature.common.util.ResResolver;
 import org.nature.feign.model.Demo;
 import org.nature.feign.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,6 @@ public class DemoController {
 
     @RequestMapping("test")
     public Res<Demo> test(@RequestBody Demo req) {
-        Res<Demo> res = demoService.test(req);
-        return Res.ok(res.getData());
+        return Res.ok(ResResolver.doInvoke(() -> demoService.test(req)));
     }
 }
